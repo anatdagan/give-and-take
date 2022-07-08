@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState} from "react";
 import { ErrorInfo } from "remult";
 import { remult } from "../../common";
 import { terms } from "../../shared/terms";

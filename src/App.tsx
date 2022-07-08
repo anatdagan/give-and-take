@@ -10,7 +10,10 @@ return (
             paddingBottom: "1rem",
           }}
       >
+        <Link to="/Home">Home</Link> |{" "}
         <Link to="/Register">Register</Link> |{" "}
+        <Link to="/Login">Login</Link>
+
       </nav>
       <Outlet />
     </div>
