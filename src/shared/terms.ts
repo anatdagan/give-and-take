@@ -27,5 +27,9 @@ export const terms = {
     shouldResetPassword: "Reset Password?",
     passwordDeleted: "Password was reset, next time the user signs in, a new password will be determined",
     delete: "Delete",
-    save:"Save"
+    save:"Save",
+    phoneNumber: "phone number",
+    organization: "organization",
+    superUser: "super user",
+    organizationName: "organization name",
 }

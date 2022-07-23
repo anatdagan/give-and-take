@@ -44,4 +44,22 @@ export class User {
         caption: terms.admin
     })
     admin = false;
+
+    @Fields.boolean({
+        allowApiUpdate: Roles.superuser,
+        caption: terms.superUser
+    })
+    superuser = false;
+    @Fields.string({
+        validate: (user) => {
+            return user.phonenumber.exec(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im)
+        },
+        caption: terms.phoneNumber
+    })
+    phonenumber = '';
+    @Fields.string({
+        caption: terms.organization,
+    })
+    organization = '';
+
 }
