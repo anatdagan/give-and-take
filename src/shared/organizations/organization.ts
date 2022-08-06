@@ -29,4 +29,26 @@ export class Organization {
         allowApiUpdate: false
     })
     createDate = new Date();
+    @Fields.string({
+        caption: terms.organizationDescription
+    })
+    organizationDescription = '';
+    @Fields.string({
+        caption: terms.contactName
+    })
+    contactName = ''
+    @Fields.string({
+        validate: (contact) => {
+            return contact.phonenumber.exec(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im)
+        },
+        caption: terms.contactPhoneNumber
+    })
+    contactPhoneNumber = '';
+    @Fields.string({
+        validate: (contact) => {
+            return contact.contactEmail.exec(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/im)
+        },
+        caption: terms.contactEmail
+    })
+    contactEmail = '';
 }
