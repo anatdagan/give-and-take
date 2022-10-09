@@ -1,0 +1,125 @@
+body, html {
+    height: 100%;
+}
+.logo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/giveandtakelogo.png");
+    height: 200px
+}
+/* The hero image */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/giveandtakehero.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* Buttons */
+.buttons {
+    margin: 15px auto;
+    text-align: center;
+    width: 100%;
+}
+.btn {
+    position: relative;
+    display: inline-block;
+    border-radius: 25px;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 2rem;
+    margin: 2rem;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.25s ease-out;
+    text-decoration: none;
+}
+.btn::before {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    transition: all ease-in-out 0.4s;
+    -webkit-transform: scale(0);
+    border-radius: 25px;
+    opacity: 0;
+}
+.btn::before {
+    border: 2px solid #006D82;
+}
+.btn:hover::before, .btn:active::before {
+    opacity: 1;
+    -webkit-transform: scale(1);
+}
+.btn.btn-primary {
+    border: 2px solid #0099A2;
+    background: #FFF;
+    color: #000;
+    transition: all ease-in-out 0.5s;
+}
+.btn.btn-primary:hover, .btn.btn-primary:active {
+    border-color: #0099A2;
+}
+.btn.btn-primary::before {
+    border: 2px solid #006D82;
+}
+.btn.btn-secondary {
+    border: 2px solid #FFF;
+    background: transparent;
+    color: #FFF;
+}
+.btn.btn-secondary:hover, .btn.btn-secondary:active {
+    background: #FFF;
+    color: #006D82;
+}
+.btn.btn-tertiary {
+    border: 2px solid #0099A2;
+    background: #0099A2;
+    color: #FFF;
+}
+.btn.btn-tertiary:active, .btn.btn-tertiary:hover {
+    border-color: #006D82;
+    background: #006D82;
+    color: #FFF;
+}
+.btn.btn-tertiary::before {
+    border: 2px solid #FFF;
+}
+
+.container {
+    padding: 1rem;
+    text-align: center;
+}
+.container-black {
+    background: #000;
+}
+.container h2 {
+    margin: 0;
+}
+.container h2:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100px;
+    margin: 15px auto 0 auto;
+    background: #0099A2;
+}
