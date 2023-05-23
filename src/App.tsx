@@ -1,20 +1,12 @@
 import {Outlet, Link} from 'react-router-dom'
+import NavBar from './components/nav/navBar';
+import {remult} from "./common";
 
 function App() {
 return (
     <div>
       <h1>Give & Take</h1>
-      <nav
-          style={{
-            borderBottom: "solid 1px",
-            paddingBottom: "1rem",
-          }}
-      >
-        <Link to="/Home">Home</Link> |{" "}
-        <Link to="/Register">Register</Link> |{" "}
-        <Link to="/Login">Login</Link>
-
-      </nav>
+      <NavBar isLoggedIn={remult.authenticated()}></NavBar>
       <Outlet />
     </div>
 );

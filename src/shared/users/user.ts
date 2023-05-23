@@ -52,6 +52,9 @@ export class User {
     superuser = false;
     @Fields.string({
         validate: (user) => {
+            if (!user.phonenumber) {
+                return true;        
+            }
             return user.phonenumber.exec(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im)
         },
         caption: terms.phoneNumber

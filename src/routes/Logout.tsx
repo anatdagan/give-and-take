@@ -9,10 +9,8 @@ const signOut = () => {
 }
 
 
-export default function Login(){
-    if (!remult.authenticated())
-        return <SignIn />
-    return <Navigate to="/app/home" replace={true} />
-
+export default function Logout() {
+    signOut();
+    return <Navigate to="/" replace={true}></Navigate>
 }
 
