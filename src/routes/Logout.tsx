@@ -5,7 +5,6 @@ import Button from '@mui/material/Button';
 
 const signOut = () => {
     setAuthToken(null);
-    window.location.reload();
 }
 
 

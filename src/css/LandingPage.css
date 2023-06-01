@@ -70,6 +70,7 @@ body, html {
     box-sizing: border-box;
     transition: all ease-in-out 0.4s;
     -webkit-transform: scale(0);
+    transform: scale(0);
     border-radius: 25px;
     opacity: 0;
 }
@@ -79,6 +80,7 @@ body, html {
 .btn:hover::before, .btn:active::before {
     opacity: 1;
     -webkit-transform: scale(1);
+    transform: scale(1);
 }
 .btn.btn-primary {
     border: 2px solid #0099A2;
